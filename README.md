@@ -8,4 +8,4 @@ Here's the link to the project: https://hyperskill.org/projects/414
 Check out my profile: https://hyperskill.org/profile/619357970
 
 # Ting jeg lærte:
-Jeg har lært å bygge en RESTful API med Kotlin og Spring Boot. Jeg har fått erfaring med å konfigurere nødvendige beans for bildebehandling, håndtere HTTP-forespørsler, og validere inndata. I tillegg demonstrerer koden hvordan jeg kan bruke ZXing-biblioteket til å generere QR-koder dynamisk, samt hvordan jeg returnerer riktige medietyper og feilmeldinger ved ugyldig input.
+Jeg har lært å bygge en RESTful API med Kotlin og Spring Boot. I tillegg har jeg har fått erfaring med å konfigurere beans, håndtere HTTP-forespørsler, og validere inndata. Koden demonsterer hvordan man kan bruke  ZXing-biblioteket til å generere QR-koder dynamisk, samt returnere riktige medietyper og feilmeldinger ved ugyldig input.
