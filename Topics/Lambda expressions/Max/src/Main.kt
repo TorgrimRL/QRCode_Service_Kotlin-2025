@@ -1,1 +1,0 @@
-val lambda: (Int, Int) -> Int = { x: Int, y: Int -> maxOf(x,y) }
