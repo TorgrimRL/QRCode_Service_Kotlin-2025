@@ -1,11 +1,26 @@
-This is the *QRCode Service (Kotlin)* project I made myself.
 
+# QRCode Service (Kotlin)
 
-<p>This project utilizes QR codes — 2D barcodes that can store large amounts of data and are easily read by smartphones. Through this Spring Boot project, users can learn about the technology behind QR codes, generate them programmatically, and integrate them into a web service.</p><br/><br/>Learn more at <a href="https://hyperskill.org/projects/414?utm_source=ide&utm_medium=ide&utm_campaign=ide&utm_content=project-card">https://hyperskill.org/projects/414</a>
+QRCode Service (Kotlin) er et Spring Boot-basert API skrevet i Kotlin som genererer QR-koder ved hjelp av ZXing-biblioteket. Prosjektet er utviklet for å bestå Hyperskills interne tester (der det ikke finnes selvskrevne tester) og demonstrerer hvordan man kan bygge en modulær applikasjon med tydelig separasjon av ansvar.
 
-Here's the link to the project: https://hyperskill.org/projects/414
+## Designvalg og Læringspunkter
 
-Check out my profile: https://hyperskill.org/profile/619357970
+- **Separation of Concerns:**  
+  Kontrolleren (`QRCodeRestController`) håndterer HTTP-forespørsler, mens validering og bildekonvertering er delegert til egne metoder og klasser (som `ImageConverter`). Dette fører til en ryddig og lett vedlikeholdbar kodebase.
 
-# Ting jeg lærte:
-Jeg har lært å bygge en RESTful API med Kotlin og Spring Boot. I tillegg har jeg har fått erfaring med å konfigurere beans, håndtere HTTP-forespørsler, og validere inndata. Koden demonsterer hvordan man kan bruke  ZXing-biblioteket til å generere QR-koder dynamisk, samt returnere riktige medietyper og feilmeldinger ved ugyldig input.
+- **Streng Inputvalidering:**  
+  API-et sjekker  at brukerens input er korrekt (f.eks. at "contents" ikke er tom, at bildestørrelse er innenfor et definert område, at feilrettingsnivået og bildeformatet er gyldige). Dette sikrer informative feilmeldinger og forhindrer uventet oppførsel.
+
+- **Integrasjon av Eksterne Biblioteker:**  
+  Ved å benytte ZXing for QR-kodegenerering og Spring Boot for rask oppsett av API-et, viser prosjektet hvordan man kan integrere tredjepartsverktøy for å løse konkrete oppgaver på en effektiv måte.
+
+## Mulige Forbedringer
+
+- **Automatiserte Tester:**  
+  Selv om prosjektet er utformet for å bestå Hyperskills interne tester, vil implementering av enhetstester og integrasjonstester gjøre applikasjonen enda mer sikrere og enklere å videreutvikle.
+
+- **Dynamisk Utvidelse av Funksjonalitet:**  
+  Fremtidige versjoner kan inkludere flere konfigurasjonsmuligheter for QR-koder (som farger og marginer) og mulighet for å legge til nye parametre dynamisk.
+
+- **Forbedret Feilhåndtering og Logging:**  
+  Videre utvikling kan fokusere på mer omfattende logging og feilhåndtering for å lette feilsøking i produksjonsmiljøer.
