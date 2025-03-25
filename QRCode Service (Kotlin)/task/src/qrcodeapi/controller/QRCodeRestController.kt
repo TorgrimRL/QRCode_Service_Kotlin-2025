@@ -49,7 +49,7 @@ class QRCodeRestController {
     fun hello():HttpStatus = HttpStatus.OK
 
     @GetMapping(path =  ["api/qrcode"])
-    fun getImage(contents: String,
+    fun getImage(contents: String = "setoptimizer.com",
                  size: Int = 250,
                  correction:Char = 'L',
                  type: String = "png"): ResponseEntity<out Any>? {
@@ -98,4 +98,4 @@ class QRCodeRestController {
             .body(ErrorResponse(message))
     }
 
-}
+
